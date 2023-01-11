@@ -14643,9 +14643,9 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h1 style="text-align:center">Chicken Detection/Segmentation</h1></p>
 <p><h2 style="text-align:center">Mask R-CNN with Pytorch</h2>
-<a href="https://docs.google.com/presentation/d/15nZDjYnlXISw6EJ0du7ypPO-CFbnYLWvt707SG9BDVY/edit#slide=id.p"><h3 style="text-align:center">Introduction</h3></a></p>
-<h3 style="text-align:right">M11156007 Chan Ching-Wei</h3>
-<h3 style="text-align:right">M11156008 Zhu Yu-Ting</h3>
+<a href="https://docs.google.com/presentation/d/15nZDjYnlXISw6EJ0du7ypPO-CFbnYLWvt707SG9BDVY/edit#slide=id.p"><h3 style="text-align:center;color:blue;">Introduction Slides</h3></a></p>
+<p style="text-align:left">M11156007 Chan Ching-Wei</p>
+<p style="text-align:left">M11156008 Zhu Yu-Ting</p>
 </div>
 </div>
 </div>
@@ -14660,7 +14660,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14690,7 +14690,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14701,7 +14701,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14733,7 +14733,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14867,7 +14867,23 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section><section>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>More about torch.stack</p>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.stack.html">TORCH.STACK</a></li>
+<li><a href="https://blog.csdn.net/xinjieyuan/article/details/105205326">torch.stack()的官方解释，详解以及例子</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14912,6 +14928,19 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>More about albumentations.OneOf
+<a href="https://albumentations.ai/docs/api_reference/core/composition/#albumentations.core.composition.OneOf">albumentations Officical Document</a></p>
+
+</div>
+</div>
+</div>
 </div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -14965,7 +14994,7 @@ div.jp-OutputPrompt {
     <span class="n">model</span> <span class="o">=</span> <span class="n">maskrcnn_resnet50_fpn</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">in_features</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">roi_heads</span><span class="o">.</span><span class="n">box_predictor</span><span class="o">.</span><span class="n">cls_score</span><span class="o">.</span><span class="n">in_features</span>
     <span class="n">model</span><span class="o">.</span><span class="n">roi_heads</span><span class="o">.</span><span class="n">box_predictor</span> <span class="o">=</span> <span class="n">FastRCNNPredictor</span><span class="p">(</span>
-            <span class="n">in_features</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">in_features</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 1 class (chicken) + background</span>
     <span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">DEVICE</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">model</span>
@@ -14976,7 +15005,22 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>More detail about roi_heads.box_predictor: <a href="https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html">TORCHVISION OBJECT DETECTION FINETUNING TUTORIAL</a></li>
+<li><a href="https://stackoverflow.com/questions/63207013/from-where-can-i-get-a-detailed-description-of-all-the-methods-for-the-model-in">From where can i get a detailed description of all the methods for the model in pytorch torchvison？</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14994,7 +15038,7 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15164,7 +15208,23 @@ index created!
 
 </div>
 
-</div></div></section></section><section><section>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>More detail about pin_memory : <a href="https://discuss.pytorch.org/t/what-is-the-disadvantage-of-using-pin-memory/1702/9">What is the disadvantage of using pin_memory?</a></li>
+<li>More detail about num_workers : <a href="https://pytorch.org/docs/stable/data.html#single-and-multi-process-data-loading">Multi-process data loading</a></li>
+<li>More detail about collate_dn : <a href="https://blog.csdn.net/qq_43391414/article/details/120462055">pytorch之深入理解collate_fn</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15297,6 +15357,22 @@ To: /content/test_video.mp4
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>cv2.swapaxes : <a href="https://www.geeksforgeeks.org/numpy-swapaxes-function-python/">numpy.swapaxes() function | Python</a></li>
+<li>cv2.rectangle and cv2.putText : <a href="https://stackoverflow.com/questions/56108183/python-opencv-cv2-drawing-rectangle-with-text">Python OpenCV cv2 drawing rectangle with text</a></li>
+<li>cv2.addWeighted : <a href="https://steam.oxxostudio.tw/category/python/ai/opencv-add.html">影像的疊加與相減</a></li>
+</ul>
+
+</div>
+</div>
+</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15345,6 +15421,18 @@ To: /content/test_video.mp4
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Only for colab :</p>
+
+</div>
+</div>
+</div>
 </div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15386,7 +15474,7 @@ To: /content/test_video.mp4
 
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15394,11 +15482,20 @@ To: /content/test_video.mp4
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><h1 style="text-align:center">End</h1></p>
-<h2 style="text-align:center">Thank you very much!</h2>
+<p><h1 style="text-align:center">Thank you very much!</h1></p>
+<h4> The website sourcecode: 
+<a href="https://github.com/ChingWeiChan/chingweichan.github.io" style="color:blue;">ChingWeiChan/chingweichan.github.io
+</a>
+</h4>
+<h4>
+Go back to
+<a href="https://docs.google.com/presentation/d/15nZDjYnlXISw6EJ0du7ypPO-CFbnYLWvt707SG9BDVY/edit#slide=id.p"
+   style="color:blue;"> Introduction Slides</a>
+</h4>
 </div>
 </div>
 </div>
-</div></div></section></section>
+</div></section></section>
 </div>
 </div>
 </body>
